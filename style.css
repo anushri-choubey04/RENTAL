@@ -10,23 +10,92 @@ body {
     background-color: #f8f8f8;
 }
 
-/* Navbar Styles */
-nav {
-    
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    /* You can add global styles if needed */
-    font-family: 'Arial', sans-serif;
-    background-color: #f9f9f9;
+    /* --- Navbar Styles --- */
 
-}
+    .nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 16px;
+      height: 64px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
 
-nav img {
-    height: 40px;
-}
+    .logo {
+      font-size: 20px;
+      font-weight: 600;
+    }
+
+    .search-wrapper {
+      flex: 1;
+      max-width: 400px;
+      margin: 0 16px;
+      position: relative;
+    }
+
+    .search-wrapper input {
+      width: 100%;
+      background-color: #f3f4f6;
+      border: none;
+      border-radius: 9999px;
+      padding: 8px 16px;
+      font-size: 14px;
+      outline: none;
+    }
+
+    .search-wrapper i {
+      position: absolute;
+      right: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      height: 16px;
+      width: 16px;
+      color: #9ca3af;
+      pointer-events: none;
+    }
+
+    .nav-buttons {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .nav-buttons button {
+      background: none;
+      border: none;
+      font-size: 14px;
+      font-weight: 500;
+      cursor: pointer;
+    }
+
+    .nav-buttons i {
+      height: 24px;
+      width: 24px;
+    }
+
+    /* --- Responsive --- */
+    @media (max-width: 768px) {
+      .search-wrapper {
+        max-width: 250px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .search-wrapper {
+        display: none;
+      }
+
+      .nav-buttons {
+        gap: 8px;
+      }
+
+      .logo {
+        font-size: 18px;
+      }
+    }
+
+
 
 /* Story Section */
 .story-container {
