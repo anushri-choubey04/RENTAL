@@ -1,0 +1,50 @@
+<div class="story-container bg-gray-100">
+  <!-- Stories Strip -->
+  <div class="px-4 py-4">
+    <div id="stories-strip" class="flex gap-4 overflow-x-auto hide-scrollbar"></div>
+  </div>
+
+  <!-- Story Viewer -->
+  <div id="story-viewer" class="fixed inset-0 bg-black/90 z-50 hidden items-center justify-center">
+    <div class="relative w-full max-w-[500px] h-screen bg-black flex flex-col" id="viewer-container">
+      <!-- Progress Bar -->
+      <div id="progress-bars" class="absolute top-0 left-0 right-0 z-20 flex gap-1 p-2"></div>
+
+      <!-- Header -->
+      <div class="absolute top-0 left-0 right-0 z-20 flex items-center justify-between p-4 pt-6">
+        <div class="flex items-center gap-2">
+          <img id="profile-pic" class="w-10 h-10 rounded-full object-cover" />
+          <div>
+            <h3 id="username" class="text-white font-semibold text-sm"></h3>
+            <p id="timestamp" class="text-white/80 text-xs"></p>
+          </div>
+        </div>
+        <button id="close-viewer-btn" class="text-white p-2">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Story Content -->
+      <div id="story-content" class="h-full w-full relative"></div>
+
+      <!-- Caption -->
+      <div id="caption" class="absolute bottom-24 left-0 right-0 p-4 text-white text-center text-lg font-medium"></div>
+
+      <!-- Swipe Up -->
+      <div id="swipe-up" class="absolute bottom-24 left-0 right-0 flex flex-col items-center text-white hidden">
+        <svg class="w-6 h-6 animate-bounce" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
+        </svg>
+        <span class="text-sm">Swipe up to see more</span>
+      </div>
+
+      <!-- Action Bar -->
+      <div class="absolute bottom-0 left-0 right-0 p-4 flex items-center gap-4">
+        <input type="text" placeholder="Send message" class="flex-1 bg-white/10 text-white rounded-full px-4 py-2 text-sm placeholder-white/60" />
+        <div class="flex gap-2 text-white">❤️</div>
+      </div>
+    </div>
+  </div>
+</div>
